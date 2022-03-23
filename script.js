@@ -9,12 +9,20 @@ function addR() {
     const newRow = document.createElement('tr');
     if(numRows === 0) {
         const newCell = document.createElement('td');
+        //set color to whatever is selected
+        newCell.addEventListener('click', () => {
+            newCell.style.backgroundColor = colorSelected;
+        })
         newRow.appendChild(newCell);
         numRows++;
         numCols++;
     } else {
         for(let i = 0; i < numCols; i++) {
             const newCell = document.createElement('td');
+            //set color to whatever is selected
+            newCell.addEventListener('click', () => {
+                newCell.style.backgroundColor = colorSelected;
+            })
             newRow.appendChild(newCell);
         }
         numRows++;
@@ -27,6 +35,10 @@ function addC() {
     if(numRows === 0) {
         const newRow = document.createElement('tr');
         const newCell = document.createElement('td');
+        //set color to whatever is selected
+        newCell.addEventListener('click', () => {
+            newCell.style.backgroundColor = colorSelected;
+        })
         newRow.appendChild(newCell);
         numRows++;
         numCols++;
@@ -35,6 +47,10 @@ function addC() {
         const allRows = document.querySelectorAll('tr');
         allRows.forEach((row) => {
             const newCell = document.createElement('td');
+            //set color to whatever is selected
+            newCell.addEventListener('click', () => {
+                newCell.style.backgroundColor = colorSelected;
+            })
             row.appendChild(newCell);
         })
         numCols++;
