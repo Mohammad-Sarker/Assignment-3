@@ -25,7 +25,21 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    if(numRows === 0) {
+        const newRow = document.createElement('tr');
+        const newCell = document.createElement('td');
+        newRow.appendChild(newCell);
+        numRows++;
+        numCols++;
+        table.appendChild(newRow);
+    } else {
+        const allRows = document.querySelectorAll('tr');
+        allRows.forEach((row) => {
+            const newCell = document.createElement('td');
+            row.appendChild(newCell);
+        })
+        numCols++;
+    }
 }
 
 // Remove a row
