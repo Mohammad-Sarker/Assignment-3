@@ -16,9 +16,8 @@ function addR() {
         for(let i = 0; i < numCols; i++) {
             const newCell = document.createElement('td');
             newRow.appendChild(newCell);
-            numRows++;
-            console.log(numRows);
         }
+        numRows++;
     }
     table.appendChild(newRow);
 }
