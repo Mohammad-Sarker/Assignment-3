@@ -2,10 +2,25 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected; 
+const table = document.querySelector('table');
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    const newRow = document.createElement('tr');
+    if(numRows === 0) {
+        const newCell = document.createElement('td');
+        newRow.appendChild(newCell);
+        numRows++;
+        numCols++;
+    } else {
+        for(let i = 0; i < numCols; i++) {
+            const newCell = document.createElement('td');
+            newRow.appendChild(newCell);
+            numRows++;
+            console.log(numRows);
+        }
+    }
+    table.appendChild(newRow);
 }
 
 // Add a column
