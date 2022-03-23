@@ -54,7 +54,19 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if(numCols !== 0) {
+        const allRows = document.querySelectorAll('tr');
+        allRows.forEach((row) => {
+            row.removeChild(row.lastChild);
+        })
+        if(numCols === 1) {
+            allRows.forEach((row) => {
+                table.removeChild(row);
+            })
+            numRows = 0;
+        }
+        numCols--;
+    }
 }
 
 // Set global variable for selected color
