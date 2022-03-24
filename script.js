@@ -98,7 +98,13 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    let numRows = document.getElementsByTagName("tr");
+    for (let row of numRows) {
+      for (let col of row.childNodes) {
+        console.log(col);
+        col.style.backgroundColor = colorSelected;
+      }
+    }
 }
 
 // Clear all cells
