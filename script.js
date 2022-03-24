@@ -109,5 +109,10 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let numRows = document.getElementsByTagName("tr");
+    for (let row of numRows) {
+      for (let col of row.childNodes) {
+        col.style.backgroundColor = "transparent";
+      }
+    }
 }
