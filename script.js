@@ -96,7 +96,7 @@ function fillU(){
     let allRows = document.querySelectorAll("tr");
     allRows.forEach((row) => {
         for(let newCell of row.childNodes) { 
-            if(newCell.style.backgroundColor == "") {
+            if(newCell.style.backgroundColor == "white") {
                 console.log(newCell);
                 newCell.style.backgroundColor = colorSelected;
             }
