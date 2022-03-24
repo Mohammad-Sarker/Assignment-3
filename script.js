@@ -93,9 +93,16 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    let allRows = document.querySelectorAll("tr");
+    allRows.forEach((row) => {
+        for(let newCell of row.childNodes) { 
+            if(newCell.style.backgroundColor == "") {
+                console.log(newCell);
+                newCell.style.backgroundColor = colorSelected;
+            }
+        }
+    })
 }
-
 // Fill all cells
 function fillAll(){
     let numRows = document.getElementsByTagName("tr");
