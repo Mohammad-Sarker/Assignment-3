@@ -112,7 +112,7 @@ function clearAll(){
     let numRows = document.getElementsByTagName("tr");
     for (let row of numRows) {
       for (let col of row.childNodes) {
-        col.style.backgroundColor = "transparent";
+        col.style.backgroundColor = "white";
       }
     }
 }
